@@ -1,10 +1,10 @@
 club = input("What club did you use? ")
 
-distances = [
-    int(input("How far was shot 1? ")),
-    int(input("How far was shot 2? ")),
-    int(input("How far was shot 3? "))
-]
+distances = []
+
+for shot in range(3):
+    distance = int(input(f"How far was shot {shot + 1}? "))
+    distances.append(distance)
 
 average_distance = sum(distances) / len(distances)
 
