@@ -1,11 +1,18 @@
 def calculate_average(numbers):
     return sum(numbers) / len(numbers)
 
-def show_summary(club, distances, average):
+
+def calculate_range(numbers):
+    return max(numbers) - min(numbers)
+
+
+def show_summary(club, distances, average, distance_range):
     print("\nShot summary")
     print("Club:", club)
     print("Distances:", distances)
     print("Average distance:", average, "yards")
+    print("Distance range:", distance_range, "yards")
+
 
 club = input("What club did you use? ")
 
@@ -23,6 +30,11 @@ while True:
     except ValueError:
         print("Please enter a number or type 'done'.")
 
-average_distance = calculate_average(distances)
 
-show_summary(club, distances, average_distance)
+if len(distances) == 0:
+    print("No shots were entered.")
+else:
+    average_distance = calculate_average(distances)
+    distance_range = calculate_range(distances)
+
+    show_summary(club, distances, average_distance, distance_range)
