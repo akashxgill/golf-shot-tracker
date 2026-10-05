@@ -2,8 +2,13 @@ club = input("What club did you use? ")
 
 distances = []
 
-for shot in range(3):
-    distance = int(input(f"How far was shot {shot + 1}? "))
+while True:
+    user_input = input("How far was the shot? Type 'done' when finished: ")
+
+    if user_input.lower() == "done":
+        break
+
+    distance = int(user_input)
     distances.append(distance)
 
 average_distance = sum(distances) / len(distances)
