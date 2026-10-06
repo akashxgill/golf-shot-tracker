@@ -1,19 +1,9 @@
-club = input("What club did you use? ")
+shot = {
+    "club": "7 iron",
+    "distance": 145,
+    "result": "good"
+}
 
-distances = []
-
-while True:
-    user_input = input("How far was the shot? Type 'done' when finished: ")
-
-    if user_input.lower() == "done":
-        break
-
-    distance = int(user_input)
-    distances.append(distance)
-
-average_distance = sum(distances) / len(distances)
-
-print("\nShot summary")
-print("Club:", club)
-print("Distances:", distances)
-print("Average distance:", average_distance, "yards")
+print(shot["club"])
+print(shot["distance"])
+print(shot["result"])
