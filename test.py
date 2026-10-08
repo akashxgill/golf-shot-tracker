@@ -15,3 +15,11 @@ shots = [
         "result": "thin"
     }
 ]
+
+total_distance = sum(shot["distance"] for shot in shots)
+total_shots = len(shots)
+average_distance = total_distance / total_shots
+
+print(f"Average distance: {average_distance:.1f} yards")    
+print(f"Total distance: {total_distance:.1f} yards")
+
